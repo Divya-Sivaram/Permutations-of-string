@@ -1,0 +1,26 @@
+import java.io.*;
+class permutation
+{
+    public void process(String a, String b)
+    {
+        if(a.length()==0)
+        {
+            System.out.println(b+"\n");
+        }
+        for(int i=0;i<a.length();i++)
+        {
+            char ch=a.charAt(i);
+            String a1=a.substring(0,i)+a.substring(i+1);
+            process(a1,b+ch);
+
+        }
+    }
+}
+public class Fourth {
+public static void main(String args[]) {
+    String str = "ABC";
+    permutation p1=new permutation();
+    p1.process(str,"");
+}
+
+}
